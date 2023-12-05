@@ -3,18 +3,13 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin: 1rem;
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +23,46 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.black {
+  color: black;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc; /* Input alanının kenarlık rengi */
+}
+
+.search-icon {
+  width: 20px; /* Resmin genişliği */
+  height: 20px; /* Resmin yüksekliği */
+  margin-right: 10px; /* Resim ile input arasındaki boşluk */
+  margin-left: 10px;
+}
+
+.input {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  color: white;
+  background-color: #01447b;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
 }
