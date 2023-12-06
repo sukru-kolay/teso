@@ -36,8 +36,8 @@
 }
 
 .largeTitleContainer {
-  width: fixed 740px;
-  height: fixed 54px;
+  width: 740px;
+  height: 54px;
   position: absolute;
   top: 327.71px;
   left: 270px;
@@ -61,65 +61,89 @@
 }
 
 .search-container {
-  display: flex;
-  align-items: center;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid #ccc; /* Input alanının kenarlık rengi */
-  border-radius: 8px;
+  /* display: flex;
+  align-items: center; */
+  position: absolute;
   width: 646px;
   height: 48px;
-  position: absolute;
+  top: 393.86px;
   left: 302.5px;
+  border-radius: 8px; 
 }
 
-.search-icon {
-  width: 20px; /* Resmin genişliği */
-  height: 20px; /* Resmin yüksekliği */
-  margin-right: 10px; /* Resim ile input arasındaki boşluk */
-  margin-left: 10px;
+
+.searchIconContainer{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.searchIcon {
+  width: 18px; /* Resmin genişliği */
+  height:18px; /* Resmin yüksekliği */
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  
 }
 
 .input {
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  border-radius: 0.5rem;
+width: 646px;
+height: 48px;
+border-radius: 8px;
+border: 2px solid #204080;
 }
 
-.search-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.addNewRecordbuttonContainer{
+  width: 197.16px;
+  height: 46px;
+  position: absolute;
+  top: 64px;
+  left: 1020px;
 }
-
-.button {
-  color: white;
-  background-color: #01447b;
-  border-radius: 0.5rem;
-  margin-left: 1rem;
-  padding: 0.5rem;
+.buttonText{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.09px;
+}
+.buttonContainer{
   width: 138px;
   height: 46px;
-  /*
   position: absolute;
   top: 393.86px;
-  */
-  position: relative;
-  left: 275px;
+  left: 959.9px;
+}
+.button {
+  background-color: #204080;
+  width: 138px;
+  height: 46px;
+  /* position: absolute;
+  top: 393.86px;
+  left: 959.9px; */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.09px;
+  border-radius: 8px;
 }
 
+.resultCardContainer{
+  width: 717.84px;
+  height: 248.25px;
+  top: 458.57px;
+  left: 266.58px;
+  border-radius: 24px;
+  border: 1px solid #484848;
+}
 .resultCard {
-  margin: 1rem;
   width: 717.84px;
   height: 248.25px;
   border: 1px solid #484848;
   border-radius: 24px;
+  position: absolute;
+  top: 458px;
+  left: 266.58px; 
 }
 
 .bold {
@@ -132,6 +156,7 @@
   font-weight: 700;
   line-height: 24px;
   cursor: pointer;
+  text-align: center;
 }
 .pointer {
   cursor: pointer;
@@ -155,53 +180,72 @@
   line-height: 16px;
 }
 
+.topNewsContainer{
+  width: 740px;
+  height: 54px;
+  position: absolute;
+  top: 788px;
+  left: 84.08px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+}
 .topNews {
   color: #090a0a;
   font-size: 32px;
   line-height: 36px;
   font-weight: 700;
 }
+.topNewsCaption{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.newsSliderContainer{
+  width: 11161.35px;
+  height: 279px;
+  position: absolute;
+  top: 885px;
+  left: 55.16px;
+  border-radius: 24px;
+}
 .bigPhotoContainer {
   width: 327px;
   height: 279px;
+  top: 885px;
+  left: 127.08px;
   gap: 12px;
+  margin: 1rem;
 }
 .footer {
+  background-color: #294E98B8;
   /* width: 1280px; */
   width: 100%;
   height: 277.13px;
-  background-color: #294e98b8;
-  position: relative;
-  display: flex;
-  margin-top: 5rem;
+  position: absolute;
+  top: 1222.87px;
 }
 
-.footerLeftImageContainer {
-  position: absolute;
-  left: 59.66px;
-  top: 15px;
+.footerRectangle{
+  display: flex;
+  width: 1280px;
+  height: 277.13px;
+  margin: 2rem;
+  top: 1222.87px;
 }
+
 .footerLeftImage {
   width: 217.42px;
   height: 179.5px;
+  top: 1271.69px;
+  left: 59.66px;
 }
 
-.footerMapImageContainer {
-  position: absolute;
-  left: 758.67px;
-  top: 15px;
-}
 .footerMapImage {
   width: 467.49px;
   height: 222.49px;
-}
-
-.footerDescriptionContainer {
-  position: absolute;
-  width: 424.98px;
-  height: 171.77px;
-  left: 302.5px;
-  top: 15px;
+  top: 1250.19px;
+  left: 758.67px;
 }
 .footerDescription {
   font-weight: 400;
@@ -210,4 +254,5 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
+  color: #ffffff;
 }
