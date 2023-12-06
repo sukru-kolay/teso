@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -10,7 +10,7 @@
 
 .App-header {
   /* background-color: #282c34; */
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +37,7 @@
   flex-direction: row;
   align-items: center;
   border: 1px solid #ccc; /* Input alanının kenarlık rengi */
+  border-radius: 0.5rem;
 }
 
 .search-icon {
@@ -51,6 +52,7 @@
   font-size: 16px;
   border: none;
   outline: none;
+  border-radius: 0.5rem;
 }
 
 .search-button {
@@ -65,4 +67,102 @@
   border-radius: 0.5rem;
   margin-left: 1rem;
   padding: 0.5rem;
+}
+
+.resultCard {
+  margin: 1rem;
+  width: 50%;
+  max-height: 350px;
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.showMore {
+  color: #090a0a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.newsImage {
+  width: 327px;
+  height: 195px;
+}
+
+.newsTitle {
+  color: #090a0a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.newsDescription {
+  color: #6c7072;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.topNews {
+  color: #090a0a;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.bigPhotoContainer {
+  width: 327px;
+  height: 279px;
+  gap: 12px;
+}
+.footer {
+  /* width: 1280px; */
+  width: 100%;
+  height: 277.13px;
+  background-color: #294e98b8;
+  position: relative;
+  display: flex;
+  margin-top: 5rem;
+}
+
+.footerLeftImageContainer {
+  position: absolute;
+  left: 59.66px;
+  top: 15px;
+}
+.footerLeftImage {
+  width: 217.42px;
+  height: 179.5px;
+}
+
+.footerMapImageContainer {
+  position: absolute;
+  left: 758.67px;
+  top: 15px;
+}
+.footerMapImage {
+  width: 467.49px;
+  height: 222.49px;
+}
+
+.footerDescriptionContainer {
+  position: absolute;
+  width: 424.98px;
+  height: 171.77px;
+  left: 302.5px;
+  top: 15px;
+}
+.footerDescription {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.09px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
 }
