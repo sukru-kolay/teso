@@ -7,6 +7,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h5 className="searchAppTitle">Search app</h5>
+        <div className="largeTitleContainer">
+          <h3 className="largeTitle">Find in records</h3>
+        </div>
         <Main />
       </header>
     </div>

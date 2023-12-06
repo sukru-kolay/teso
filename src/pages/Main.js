@@ -19,6 +19,7 @@ const Main = () => {
             />
           </div>
         </div>
+
         <Button />
       </div>
       <ResultsCard />
