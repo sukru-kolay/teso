@@ -10,6 +10,7 @@ const Table = () => {
         <p className="black contentIsHere">18th Street Brewery</p>
         <p className="black forCaption">Oakley Avenue, Hammond, IN</p>
       </div>
+      <div className="dividers"></div>
     </div>
   );
 };

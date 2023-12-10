@@ -101,6 +101,7 @@
   height: 48px;
   border-radius: 8px;
   border: 2px solid #204080;
+  padding-left: 36px;
 }
 
 .addNewRecordbuttonContainer {
@@ -165,6 +166,21 @@
   line-height: 24px;
   cursor: pointer;
   text-align: center;
+  width: 327px;
+  height: 28.77px;
+  position: absolute;
+  /* top: 665.7px;
+  left: 563.98px; */
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.dividers{
+  width: 575px;
+  height: 1px;
+  background-color: #F2F4F5
 }
 .pointer {
   cursor: pointer;

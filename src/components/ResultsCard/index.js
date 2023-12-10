@@ -6,6 +6,7 @@ const ResultsCard = () => {
       <Table />
       <Table />
       <Table />
+      <div className="showMore">Show more</div>
     </div>
   );
 };
