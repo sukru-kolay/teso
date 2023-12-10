@@ -1,5 +1,9 @@
 .App {
   /* text-align: center; */
+  /* background-color: tomato; */
+  width: 1280px;
+  /* width: 1320px; */
+  position: relative;
 }
 
 .App-logo {
@@ -14,6 +18,8 @@
 }
 
 .App-header {
+  /* background-color: greenyellow; */
+  width: 1280px;
   /* background-color: #282c34; */
   min-height: 40vh;
   display: flex;
@@ -58,6 +64,10 @@
 
 .black {
   color: black;
+}
+
+.mainContainer {
+  background-color: rgb(3, 255, 167);
 }
 
 .search-container {
@@ -218,24 +228,32 @@
 .footer {
   display: flex;
   background-color: #294e98b8;
-  width: 1280px;
+  /* width: 1280px; */
+  width: 1320px;
   height: 277.13px;
-  position: relative;
+  position: absolute;
   top: 1222.87px;
 }
 
 .footerLeftImage {
   width: 217.42px;
   height: 179.5px;
-  top: 1271.69px;
+  /* top: 1271.69px; */
+  /* left: 59.66px; */
+  position: relative;
+  top: 50.69px;
   left: 59.66px;
 }
 
 .footerMapImage {
-  width: 467.49px;
+  /* width: 467.49px;
   height: 222.49px;
   top: 1250.19px;
+  left: 758.67px; */
+
+  position: absolute;
   left: 758.67px;
+  top: 40.19px;
 }
 .footerDescription {
   font-weight: 400;
@@ -245,19 +263,29 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   color: #ffffff;
+  position: relative;
+
+  width: 424.98px;
+  height: 171.77px;
+  top: 40px;
+  left: 102.5px;
 }
 
 .tableContainer {
   display: flex;
+  justify-content: center;
+
   width: 666px;
   height: 63px;
   /* position: absolute; */
-  top: 474.7px;
-  left: 277.08px;
+  /* top: 474.7px;
+  left: 277.08px; */
+  position: relative;
+  top: 6px;
   padding: 12px, 24px, 11px, 24px;
 }
 .tableIcon {
-  position: relative;
+  position: absolute;
   width: 24px;
   height: 24px;
   top: 20px;
@@ -281,6 +309,7 @@
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
+  position: absolute;
   top: 24px;
   height: 16px;
   width: 196px;
@@ -289,7 +318,7 @@
 .partialsContainer {
   width: 582px;
   height: 40px;
-  position: relative;
-  top: 12px;
+  position: absolute;
+  /* top: 12px; */
   left: 60px;
 }
