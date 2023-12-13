@@ -5,11 +5,26 @@ import searchIcon from "../assets/searchIcon.svg";
 import smallLogo from "../smallLogo.svg";
 import Table from "../components/Tables";
 import { useSelector } from "react-redux";
+import ResultContainer from "../components/ResultContainer";
+import mockData from "../mock-data.json";
+
 const ResultPage = () => {
   const inputText = useSelector((selector) => selector.searchedText); // selector denen şey yukarıdaki initial state oluyor.
   const [searchTerm, setSearchTerm] = React.useState();
   const [isDisabled, setIsDisabled] = React.useState(true);
 
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [filteredData, setFilteredData] = useState([]);
+  // useEffect(() => {
+  //   const lowerCaseSearchTerm = searchTerm.toLowerCase();
+  //   const filteredData = mockData.data.filter((item) =>
+  //     item[mockData.cols.indexOf("nameSurname")]
+  //       .toLowerCase()
+  //       .includes(lowerCaseSearchTerm)
+  //   );
+  //   setFilteredData(filteredData);
+  //   // console.log(filteredData);
+  // }, [searchTerm, mockData.cols, mockData.data]);
   return (
     <div>
       <Link to="/">
@@ -38,14 +53,7 @@ const ResultPage = () => {
         </div>
       </Link>
 
-      <div className="resultContainer">
-        <Table company="company" city="city" country="country" />
-        <Table company="company" city="city" country="country" />
-        <Table company="company" city="city" country="country" />
-        <Table company="company" city="city" country="country" />
-        <Table company="company" city="city" country="country" />
-        <Table company="company" city="city" country="country" />
-      </div>
+      <ResultContainer searchedData={inputText} />
     </div>
   );
 };
