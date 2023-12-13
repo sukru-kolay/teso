@@ -1,7 +1,12 @@
 import React from "react";
 import Table from "../Tables";
 import { Link } from "react-router-dom";
-const ResultsCard = ({ results }) => {
+import { useDispatch } from "react-redux";
+const ResultsCard = ({ results, searchTerm }) => {
+  const dispatch = useDispatch();
+  const handleShowMore = ()=>{
+    dispatch({ type: "INPUT_TEXT", payload: { searchedText: searchTerm } });
+  }
   const firstThreeResults = results.slice(0, 3);
   return (
     <div className="resultCard">
@@ -16,7 +21,7 @@ const ResultsCard = ({ results }) => {
           <div className="dividers"></div>
         </>
       ))}
-      <Link to="/results">
+      <Link to="/results" onClick={handleShowMore}>
         <div className="showMore">Show more</div>
       </Link>
     </div>

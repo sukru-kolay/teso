@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import searchIcon from "../assets/searchIcon.svg";
@@ -10,21 +10,21 @@ import mockData from "../mock-data.json";
 
 const ResultPage = () => {
   const inputText = useSelector((selector) => selector.searchedText); // selector denen şey yukarıdaki initial state oluyor.
-  const [searchTerm, setSearchTerm] = React.useState();
-  const [isDisabled, setIsDisabled] = React.useState(true);
+  const [searchTerm, setSearchTerm] = useState();
+  const [isDisabled, setIsDisabled] = useState(true);
 
   // const [searchTerm, setSearchTerm] = useState("");
-  // const [filteredData, setFilteredData] = useState([]);
-  // useEffect(() => {
-  //   const lowerCaseSearchTerm = searchTerm.toLowerCase();
-  //   const filteredData = mockData.data.filter((item) =>
-  //     item[mockData.cols.indexOf("nameSurname")]
-  //       .toLowerCase()
-  //       .includes(lowerCaseSearchTerm)
-  //   );
-  //   setFilteredData(filteredData);
-  //   // console.log(filteredData);
-  // }, [searchTerm, mockData.cols, mockData.data]);
+  const [filteredData, setFilteredData] = useState([]);
+  useEffect(() => {
+    const lowerCaseSearchTerm = inputText.toLowerCase();
+    const filteredData = mockData.data.filter((item) =>
+      item[mockData.cols.indexOf("nameSurname")]
+        .toLowerCase()
+        .includes(lowerCaseSearchTerm)
+    );
+    setFilteredData(filteredData);
+    // console.log(filteredData);
+  }, [inputText, mockData.cols, mockData.data]);
   return (
     <div>
       <Link to="/">
@@ -53,7 +53,7 @@ const ResultPage = () => {
         </div>
       </Link>
 
-      <ResultContainer searchedData={inputText} />
+      <ResultContainer searchedData={inputText} filteredData = {filteredData} />
     </div>
   );
 };

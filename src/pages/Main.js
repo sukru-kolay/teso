@@ -1,12 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import searchIcon from "../assets/searchIcon.svg";
 import Button from "../components/Button";
 import ResultsCard from "../components/ResultsCard";
 import BigNewsCard from "../components/NewsCard";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import mockData from "../mock-data.json";
-import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 const Main = () => {
   const dispatch = useDispatch();
@@ -57,7 +55,9 @@ const Main = () => {
         </div>
       </Link>
 
-      <ResultsCard results={filteredData} />
+      { searchTerm && 
+        <ResultsCard results={filteredData} searchTerm={searchTerm}/>
+      }
       <div className="topNewsContainer">
         <h3 className="topNews">Top News</h3>
         <h3 className="topNewsCaption"></h3>

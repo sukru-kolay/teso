@@ -312,6 +312,19 @@
   top: 6px;
   padding: 12px, 24px, 11px, 24px;
 }
+
+.resultTableContainer{
+  width: 726.14px;
+  height: 78.86px;
+  top: 370.95px;
+  left: 186px;
+  padding: 19px, 24.14px, 19.86px, 24px;
+  border-radius: 8px;
+  
+}
+.resultTableContainer:hover{
+  background-color: #4F75C236;
+}
 .tableIcon {
   position: absolute;
   width: 24px;
@@ -402,4 +415,63 @@
   left: 186px;
   border-radius: 8px;
   border: 1px solid #7e7e7e;
+}
+.resultsTableIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 48px;
+  left: 20px;
+}
+.resultsPartialsTablesContainer{
+  display: flex;
+  width: 726.14px;
+  height: 78.86px;
+  top: 477.75px;
+  left: 186px;
+  padding: 19px, 24.14px, 19.86px, 24px;
+  border-radius: 8px;
+  
+
+}
+
+.nameSurname{
+  position: relative;
+  left: 540.65px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #484848;
+  
+}
+.date{
+  position:absolute;
+  width: 88.16.5px;
+  height: 25.03px;
+  top: 14.39px;
+  left: 540.65px;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #484848;
+}
+
+.resultsPartialsTablesContainerCompanyCity{
+  width: 582px;
+  height: 40px;
+  position: absolute;
+  left: 60px;
+}
+.resultsPartialsTablesContainerNameDate{
+  width: 582px;
+  height: 40px;
+  position: absolute;
+  left: 60px;
 }
