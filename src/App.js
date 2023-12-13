@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import Main from "./pages/Main";
 import footerLeftImage from "./assets/footerLeftImage.svg";
-import footerMapImage from "./assets/footerMap.svg";
 import Button from "./components/Button";
 function App() {
   return (

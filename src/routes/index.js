@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Result from "../pages/ResultPage";
+import AddLink from "../pages/AddLinkPage";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -9,6 +10,10 @@ const routes = createBrowserRouter([
   {
     path: "/results",
     element: <Result />,
+  },
+  {
+    path: "/addLink",
+    element: <AddLink />,
   },
 ]);
 

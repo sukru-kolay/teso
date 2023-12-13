@@ -7,9 +7,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import mockData from "../mock-data.json";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 const Main = () => {
+  const dispatch = useDispatch();
+
+  const [isDisabled, setIsDisabled] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+
   useEffect(() => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const filteredData = mockData.data.filter((item) =>
@@ -18,8 +23,12 @@ const Main = () => {
         .includes(lowerCaseSearchTerm)
     );
     setFilteredData(filteredData);
-    console.log(filteredData);
+    // console.log(filteredData);
   }, [searchTerm, mockData.cols, mockData.data]);
+
+  const handleSearchedText = () => {
+    dispatch({ type: "INPUT_TEXT", payload: { searchedText: searchTerm } });
+  };
   return (
     <div className="mainContainer">
       <div className="search-container">
@@ -28,12 +37,23 @@ const Main = () => {
         </div>
         <input
           className="input"
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            {
+              e.target.value !== ""
+                ? setIsDisabled(false)
+                : setIsDisabled(true);
+            }
+          }}
         />
       </div>
       <Link to="/results">
         <div className="buttonContainer">
-          <Button title="Search" />
+          <Button
+            title="Search"
+            disabled={isDisabled}
+            onClick={handleSearchedText}
+          />
         </div>
       </Link>
 
